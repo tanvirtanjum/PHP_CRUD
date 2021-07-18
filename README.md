@@ -1,5 +1,5 @@
 # PHP_CRUD
-A simple php CRUD application.
+A simple php CRUD application.</br>
 Instructions:
     1. Create a database in MySql named 'php_crud_db'
     2. Import the database backup file (php_crud_db.sql) from 'DB Backup' folder (./DB Backup/php_crud_db.sql)
