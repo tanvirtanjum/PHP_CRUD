@@ -1,0 +1,34 @@
+CREATE TABLE Departments (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) UNIQUE,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE Students (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) UNIQUE,
+    dob datetime NOT NULL,
+    credit int NOT NULL,
+    cgpa double(4,2) NOT NULL,
+    dept_id int NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (dept_id) REFERENCES Departments(id)
+);
+
+CREATE TABLE Admins (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    username varchar(255) NOT NULL UNIQUE,
+    password varchar(255) NOT NULL,   
+    PRIMARY KEY (id)
+);
+
+INSERT INTO Admins (name, username, password) VALUES ('Jarin Tasnim Shama', 'shama', '12345');
+
+INSERT INTO Departments (name) VALUES ('ARCH');
+INSERT INTO Departments (name) VALUES ('BBA');
+INSERT INTO Departments (name) VALUES ('CSE');
+INSERT INTO Departments (name) VALUES ('EEE');
+INSERT INTO Departments (name) VALUES ('ENG');
+INSERT INTO Departments (name) VALUES ('IPE');
+INSERT INTO Departments (name) VALUES ('MMC');
